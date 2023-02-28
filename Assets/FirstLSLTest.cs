@@ -39,8 +39,8 @@ public class FirstLSLTest : AFloatOutlet
         if(GlobalReferences.instance != null)
         {
             //var values = _cube.position;
-            var values = GlobalReferences.instance._localPlayer.transform.position;
-
+            //var values = GlobalReferences.instance._localPlayer.transform.position;
+            var values = transform.position;
             //Debug.Log(values);
             sample[0] = values.x;
             sample[1] = values.y;
