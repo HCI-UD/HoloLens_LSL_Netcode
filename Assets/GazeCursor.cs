@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class GazeCursor : MonoBehaviour
 {
-    private MeshRenderer meshRenderer;
+    //private MeshRenderer meshRenderer;
 
     // Use this for initialization
     void Start()
     {
         // Grab the mesh renderer that's on the same object as this script.
-        meshRenderer = this.gameObject.GetComponent<MeshRenderer>();
+        //meshRenderer = this.gameObject.GetComponent<MeshRenderer>();
         PointerUtils.SetGazePointerBehavior(PointerBehavior.AlwaysOn);
     }
 
