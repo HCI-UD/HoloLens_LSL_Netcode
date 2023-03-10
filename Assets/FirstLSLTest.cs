@@ -11,7 +11,7 @@ public class FirstLSLTest : AFloatOutlet
 {
     [Header("Synchronized Transform")]
     [SerializeField]
-    private Transform _cube;
+    private Transform sphere;
 
 
     public override List<string> ChannelNames
@@ -38,13 +38,16 @@ public class FirstLSLTest : AFloatOutlet
         
         if(GlobalReferences.instance != null)
         {
-            //var values = _cube.position;
-            //var values = GlobalReferences.instance._localPlayer.transform.position;
-            var values = transform.position;
+            var gaze_values = sphere.position;
+            var headset_values = GlobalReferences.instance._localPlayer.transform.position;
+            //var values = transform.position;
             //Debug.Log(values);
-            sample[0] = values.x;
-            sample[1] = values.y;
-            sample[2] = values.z;
+            sample[0] = headset_values.x;
+            sample[1] = headset_values.y;
+            sample[2] = headset_values.z;
+            sample[3] = gaze_values.x;
+            sample[4] = gaze_values.y;
+            sample[5] = gaze_values.z;
         }      
 
         return true;

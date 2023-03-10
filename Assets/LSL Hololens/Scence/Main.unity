@@ -135,8 +135,9 @@ GameObject:
   - component: {fileID: 217959352}
   - component: {fileID: 217959351}
   - component: {fileID: 217959350}
-  - component: {fileID: 217959349}
   - component: {fileID: 217959348}
+  - component: {fileID: 217959353}
+  - component: {fileID: 217959354}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -171,23 +172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66bb17e6ca6c96347974b99532ef079e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &217959349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 217959346}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72c8f4c7854006d49b3086394f095ae6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StreamName: 
-  StreamType: 
-  moment: 0
-  IrregularRate: 0
-  _cube: {fileID: 0}
 --- !u!135 &217959350
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -251,55 +235,48 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217959346}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &223548053
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 223548055}
-  - component: {fileID: 223548054}
-  m_Layer: 0
-  m_Name: LSL-Gaze
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &223548054
+--- !u!114 &217959353
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223548053}
+  m_GameObject: {fileID: 217959346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72c8f4c7854006d49b3086394f095ae6, type: 3}
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StreamName: Gaze
-  StreamType: 
-  moment: 1
-  IrregularRate: 0
-  _cube: {fileID: 217959347}
---- !u!4 &223548055
-Transform:
+  GlobalObjectIdHash: 2920573363
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+--- !u!114 &217959354
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223548053}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1, z: 0.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 217959346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SyncPositionX: 1
+  SyncPositionY: 1
+  SyncPositionZ: 1
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
+  SyncScaleX: 0
+  SyncScaleY: 0
+  SyncScaleZ: 0
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  InLocalSpace: 0
+  Interpolate: 1
 --- !u!1 &387143683
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,7 +433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &621585067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,7 +638,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1179696890
 MonoBehaviour:
@@ -1010,7 +987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2257498371142731757, guid: edb4dc5c3fdb35049b661a595822a2ac, type: 3}
       propertyPath: ConnectionData.Address
-      value: 128.4.179.102
+      value: 128.4.183.247
       objectReference: {fileID: 0}
     - target: {fileID: 2257498371142731758, guid: edb4dc5c3fdb35049b661a595822a2ac, type: 3}
       propertyPath: m_RootOrder
@@ -1058,7 +1035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2257498371142731759, guid: edb4dc5c3fdb35049b661a595822a2ac, type: 3}
       propertyPath: networkMode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edb4dc5c3fdb35049b661a595822a2ac, type: 3}
