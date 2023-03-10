@@ -32,7 +32,7 @@ public class FirstLSLTest : AFloatOutlet
     // Update is called once per frame
     protected override bool BuildSample()
     {
-        Debug.Log(outlet.ToString());
+        //Debug.Log(outlet.ToString());
         //var values = Camera.main.transform.position;
         //var values = transform.position;
         
