@@ -14,8 +14,7 @@
 * Open Sigviewer and open the most recent file from LabRecorder
 
 1. Headset Position Tracking
-    * added Network Transform and Network Object to Cube game object
-    * FirstLSLTest script tracks headset position then streams the x, y, z through channels 0-2
+    * FirstLSLTest script tracks headset position (represented by white sphere game object) then streams the x, y, z through channels 0-2
 2. Eye Gaze Position Tracking
     * added Network Transform and Network Object to Sphere game object
     * followed tutorial on how to set up configurations https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/features/input/eye-tracking/eye-tracking-basic-setup?view=mrtkunity-2022-05#a-note-on-the-gazeinput-capability
