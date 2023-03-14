@@ -16,7 +16,7 @@ public class FirstLSLTest : AFloatOutlet
 
     public override List<string> ChannelNames
     {
-        get { return new List<string>(new string[] { "x", "y", "z" }); }
+        get { return new List<string>(new string[] { "headset x", "headset y", "headset z", "gaze x", "gaze y", "gaze z" }); }
     }
 
 
