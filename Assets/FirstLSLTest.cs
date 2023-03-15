@@ -7,16 +7,18 @@ using LSL;
 using LSL4Unity.Utils;
 using HCIUD.HoloLSL;
 
+/// <summary>
+/// sends Headset position and rotation and eye gaze position data from HoloLens to LabRecorder
+/// </summary>
 public class FirstLSLTest : AFloatOutlet
 {
     [Header("Synchronized Transform")]
     [SerializeField]
     private Transform sphere;
 
-
     public override List<string> ChannelNames
     {
-        get { return new List<string>(new string[] { "headset x", "headset y", "headset z", "gaze x", "gaze y", "gaze z" }); }
+        get { return new List<string>(new string[] { "headset position x", "headset position y", "headset position z", "headset rotation x", "headset rotation y", "headset rotation z", "gaze position x", "gaze position y", "gaze position z" }); }
     }
 
 
@@ -32,22 +34,22 @@ public class FirstLSLTest : AFloatOutlet
     // Update is called once per frame
     protected override bool BuildSample()
     {
-        //Debug.Log(outlet.ToString());
-        //var values = Camera.main.transform.position;
-        //var values = transform.position;
         
         if(GlobalReferences.instance != null)
         {
-            var gaze_values = sphere.position;
-            var headset_values = GlobalReferences.instance._localPlayer.transform.position;
-            //var values = transform.position;
-            //Debug.Log(values);
-            sample[0] = headset_values.x;
-            sample[1] = headset_values.y;
-            sample[2] = headset_values.z;
-            sample[3] = gaze_values.x;
-            sample[4] = gaze_values.y;
-            sample[5] = gaze_values.z;
+            var gaze_position_values = sphere.position;
+            var headset_position_values = GlobalReferences.instance._localPlayer.transform.position;
+            var headset_rotation_values = GlobalReferences.instance._localPlayer.transform.eulerAngles;
+
+            sample[0] = headset_position_values.x;
+            sample[1] = headset_position_values.y;
+            sample[2] = headset_position_values.z;
+            sample[3] = headset_rotation_values.x;
+            sample[4] = headset_rotation_values.y;
+            sample[5] = headset_rotation_values.z;
+            sample[6] = gaze_position_values.x;
+            sample[7] = gaze_position_values.y;
+            sample[8] = gaze_position_values.z;
         }      
 
         return true;
