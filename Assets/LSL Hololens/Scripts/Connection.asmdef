@@ -2,7 +2,9 @@
     "name": "Connection",
     "rootNamespace": "HCIUD.HoloLSL",
     "references": [
-        "Unity.Netcode.Runtime"
+        "Unity.Netcode.Runtime",
+        "Microsoft.MixedReality.Toolkit",
+        "labstreaminglayer.LSL4Unity.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
