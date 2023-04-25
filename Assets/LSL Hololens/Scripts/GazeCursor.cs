@@ -45,7 +45,7 @@ namespace HCIUD.HoloLSL
             }
             else
             {
-                Debug.Log("gaze not enabled");
+               // Debug.Log("gaze not enabled"); //may show up at first because gaze is not enabled until callibrated, but it should stop showing up after callibration 
             }
         }
 
