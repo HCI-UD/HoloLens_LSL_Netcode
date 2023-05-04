@@ -45,7 +45,7 @@ namespace HCIUD.HoloLSL
         protected override bool BuildSample()
         {
 
-            if (GlobalReferences.instance != null)
+            if (GlobalReferences.instance != null && GlobalReferences.instance._localPlayer != null)
             {
                 var gaze_position_values = sphere.position;
                 var headset_position_values = GlobalReferences.instance._localPlayer.transform.position;

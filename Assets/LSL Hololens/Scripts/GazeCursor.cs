@@ -34,11 +34,9 @@ namespace HCIUD.HoloLSL
 
                     //reset target hit info so gaze doesn't get stuck on the last target when user is not looking at it anymore
                     CoreServices.InputSystem.EyeGazeProvider.UpdateGazeInfoFromHit(new MixedRealityRaycastHit());
-
                 }
                 else //otherwise if there is not a target the user is looking at then the gaze is the direction the user is looking
                 {
-
                     gameObject.transform.position = CoreServices.InputSystem.EyeGazeProvider.GazeDirection;
                     CoreServices.InputSystem.EyeGazeProvider.UpdateGazeInfoFromHit(new MixedRealityRaycastHit());
                 }
@@ -47,7 +45,8 @@ namespace HCIUD.HoloLSL
             {
                // Debug.Log("gaze not enabled"); //may show up at first because gaze is not enabled until callibrated, but it should stop showing up after callibration 
             }
-        }
 
+        }
+        
     }
 }

@@ -1,3 +1,6 @@
+// only run this script if it's on the PC. Does not compile right for UWP Hololens 
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
+
 using System.Collections;
 using System.Collections.Generic;
 using Microsoft.Azure.Kinect.BodyTracking;
@@ -132,3 +135,5 @@ namespace HCIUD.HoloLSL
         }
     }
 }
+
+#endif
