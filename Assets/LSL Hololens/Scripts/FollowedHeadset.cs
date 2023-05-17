@@ -32,7 +32,14 @@ namespace HCIUD.HoloLSL
         {
             if (isEnableHeadset)
             {
-                transform.SetPositionAndRotation(_headsetTransform.position, _headsetTransform.rotation);
+                //BUG: I can see the kinectHead properly in 1st debug log, but when I assign to kinectHead I do not see it. Getting null error. 
+
+                //Debug.Log("start: "+ GameObject.Find("/Kinect4AzureTracker/pointBody/head"));
+                //GameObject kinectHead = GameObject.Find("/Kinect4AzureTacker/pointBody/head");
+                //Debug.Log("kinectHead: "+kinectHead);
+                float distance = Vector3.Distance(_headsetTransform.position, GameObject.Find("/Kinect4AzureTacker/pointBody/head").transform.position);
+                _headsetTransform.position.Set(_headsetTransform.position.x, _headsetTransform.position.y, _headsetTransform.position.z + distance);
+                transform.SetPositionAndRotation(_headsetTransform.position * -1f, _headsetTransform.rotation);
             }
         }
     }

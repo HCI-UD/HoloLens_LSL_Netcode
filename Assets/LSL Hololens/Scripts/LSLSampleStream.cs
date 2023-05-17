@@ -27,7 +27,8 @@ namespace HCIUD.HoloLSL
                     "torso position x", "torso position y", "torso position z", "neck position x", "neck position y", "neck position z",
                      "left knee position x", "left knee position y", "left knee position z", "right knee position x", "right knee position y", "right knee position z",
                      "left elbow position x", "left elbow position y", "left elbow position z", "right elbow position x", "right elbow position y", "right elbow position z",
-                     "left hand position x", "left hand position y", "left hand position z", "right hand position x", "right hand position y", "right hand position z"
+                     "left hand position x", "left hand position y", "left hand position z", "right hand position x", "right hand position y", "right hand position z",
+                     "head position x", "head position y", "head position z"
             }); }
         }
 
@@ -58,6 +59,7 @@ namespace HCIUD.HoloLSL
                 var right_elbow_position_values = body.Find("rightElbow").position;
                 var left_hand_position_values = body.Find("leftHand").position;
                 var right_hand_position_values = body.Find("rightHand").position;
+                var head_position_values = body.Find("head").position;       
 
                 sample[0] = headset_position_values.x;
                 sample[1] = headset_position_values.y;
@@ -98,6 +100,10 @@ namespace HCIUD.HoloLSL
                 sample[30] = right_hand_position_values.x;
                 sample[31] = right_hand_position_values.y;
                 sample[32] = right_hand_position_values.z;
+
+                sample[33] = head_position_values.x;
+                sample[34] = head_position_values.y;
+                sample[35] = head_position_values.z;
             }
 
             return true;
