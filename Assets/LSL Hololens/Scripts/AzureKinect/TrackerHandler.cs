@@ -22,7 +22,7 @@ namespace HCIUD.HoloLSL
         {
             parentJointMap = new Dictionary<JointId, JointId>();
 
-            // pelvis has no parent so set to count
+            // pelvis has no parent so set to countk
             parentJointMap[JointId.Pelvis] = JointId.Count;
             parentJointMap[JointId.SpineNavel] = JointId.Pelvis;
             parentJointMap[JointId.SpineChest] = JointId.SpineNavel;
@@ -49,12 +49,12 @@ namespace HCIUD.HoloLSL
             parentJointMap[JointId.KneeRight] = JointId.HipRight;
             parentJointMap[JointId.AnkleRight] = JointId.KneeRight;
             parentJointMap[JointId.FootRight] = JointId.AnkleRight;
-            parentJointMap[JointId.Head] = JointId.Pelvis;
-            parentJointMap[JointId.Nose] = JointId.Head;
-            parentJointMap[JointId.EyeLeft] = JointId.Head;
-            parentJointMap[JointId.EarLeft] = JointId.Head;
-            parentJointMap[JointId.EyeRight] = JointId.Head;
-            parentJointMap[JointId.EarRight] = JointId.Head;
+            parentJointMap[JointId.Head] = JointId.Head;
+            parentJointMap[JointId.Nose] = JointId.Nose;
+            parentJointMap[JointId.EyeLeft] = JointId.EyeLeft;
+            parentJointMap[JointId.EarLeft] = JointId.EarLeft;
+            parentJointMap[JointId.EyeRight] = JointId.EyeRight;
+            parentJointMap[JointId.EarRight] = JointId.EarRight;
 
             Vector3 zpositive = Vector3.forward;
             Vector3 xpositive = Vector3.right;

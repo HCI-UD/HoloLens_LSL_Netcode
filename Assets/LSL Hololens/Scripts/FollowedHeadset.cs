@@ -32,15 +32,21 @@ namespace HCIUD.HoloLSL
         {
             if (isEnableHeadset)
             {
-                //BUG: I can see the kinectHead properly in 1st debug log, but when I assign to kinectHead I do not see it. Getting null error. 
-
-                //Debug.Log("start: "+ GameObject.Find("/Kinect4AzureTracker/pointBody/head"));
-                //GameObject kinectHead = GameObject.Find("/Kinect4AzureTacker/pointBody/head");
-                //Debug.Log("kinectHead: "+kinectHead);
-                float distance = Vector3.Distance(_headsetTransform.position, GameObject.Find("/Kinect4AzureTacker/pointBody/head").transform.position);
-                _headsetTransform.position.Set(_headsetTransform.position.x, _headsetTransform.position.y, _headsetTransform.position.z + distance);
-                transform.SetPositionAndRotation(_headsetTransform.position * -1f, _headsetTransform.rotation);
+                transform.SetPositionAndRotation(_headsetTransform.position, _headsetTransform.rotation);
+                Debug.Log("head_position: " + _headsetTransform.position);
             }
+
+            //if (isenableheadset)
+            //{
+            //    //bug: i can see the kinecthead properly in 1st debug log, but when i assign to kinecthead i do not see it. getting null error. 
+
+            //    //debug.log("start: "+ gameobject.find("/kinect4azuretracker/pointbody/head"));
+            //    //gameobject kinecthead = gameobject.find("/kinect4azuretacker/pointbody/head");
+            //    //debug.log("kinecthead: "+kinecthead);
+            //    float distance = vector3.distance(_headsettransform.position, gameobject.find("/kinect4azuretracker/pointbody/head").transform.position);
+            //    _headsettransform.position.set(_headsettransform.position.x, _headsettransform.position.y, _headsettransform.position.z + distance);
+            //    transform.setpositionandrotation(_headsettransform.position * -1f, _headsettransform.rotation);
+            //}
         }
     }
 }
